@@ -6,7 +6,7 @@
 /*   By: ebarguil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 13:28:14 by ebarguil          #+#    #+#             */
-/*   Updated: 2022/02/05 18:35:50 by ebarguil         ###   ########.fr       */
+/*   Updated: 2022/02/05 20:02:15 by ebarguil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	*bigbrother(void *arg)
 	while (ft_read_val(&dat->dat_m, &dat->sig) != SIG_END)
 	{
 		now = now->next;
-		if (ft_read_val(&dat->dat_m, &dat->round) != (ULONG_MAX - 1))
+		if (ft_read_val(&dat->dat_m, &dat->round) != ULONG_MAX)
 			i = is_going_to_eat(now, dat, i);
 		is_going_to_die(now, dat);
 	}

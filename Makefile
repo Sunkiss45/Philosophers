@@ -6,7 +6,7 @@
 #    By: ebarguil <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/04 13:26:27 by ebarguil          #+#    #+#              #
-#    Updated: 2022/02/05 17:55:54 by ebarguil         ###   ########.fr        #
+#    Updated: 2022/02/05 20:03:02 by ebarguil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ $(NAME)	:	$(OBJS)
 			$(CC) -o $@ -c $< $(CFLAGS)
 
 n		:
-			norminette $(SRC)
+			norminette $(SRCS)
 			norminette $(INC)
 
 clean	:

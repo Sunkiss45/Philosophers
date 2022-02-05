@@ -6,7 +6,7 @@
 /*   By: ebarguil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 13:26:15 by ebarguil          #+#    #+#             */
-/*   Updated: 2022/02/05 19:04:43 by ebarguil         ###   ########.fr       */
+/*   Updated: 2022/02/05 19:48:14 by ebarguil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,7 @@ int	start_threads(t_dat *dat)
 		i++;
 	}
 	usleep(50000);
-	ft_write_val(&dat->dat_m, &dat->tm_zero,
-		gettime(0));
+	ft_write_val(&dat->dat_m, &dat->tm_zero, gettime(0));
 	pthread_mutex_unlock(&dat->start_m);
 	if (pthread_create(&dat->big_th, NULL, &bigbrother, (void *)dat))
 		return (1);
@@ -48,8 +47,6 @@ int	main(int ac, char **av)
 		return (ft_free_all(&dat, "Error: liste chainee error\n"));
 	if (start_threads(&dat))
 		return (ft_end_thread(&dat, "Error: invalid thread\n"));
-	while (ft_read_val(&dat.dat_m, &dat.sig) != SIG_END)
-		usleep(500);
 	ft_end_thread(&dat, NULL);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: ebarguil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 16:07:19 by ebarguil          #+#    #+#             */
-/*   Updated: 2022/02/05 16:07:40 by ebarguil         ###   ########.fr       */
+/*   Updated: 2022/02/05 19:39:20 by ebarguil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	rotate_eat(t_dat *dat)
 	if ((dat->nbr % 2 == 0 && dat->half_full == dat->nbr / 2)
 		|| (dat->nbr % 2 == 1 && dat->half_full == dat->nbr / 2 + 1
 			&& dat->sig == ODD)
-		|| (dat->nbr % 2 == 1  && dat->half_full == dat->nbr / 2
+		|| (dat->nbr % 2 == 1 && dat->half_full == dat->nbr / 2
 			&& dat->sig == EVEN))
 	{
 		if (dat->sig == EVEN)

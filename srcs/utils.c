@@ -6,7 +6,7 @@
 /*   By: ebarguil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 10:18:57 by ebarguil          #+#    #+#             */
-/*   Updated: 2022/02/05 18:38:56 by ebarguil         ###   ########.fr       */
+/*   Updated: 2022/02/05 19:38:50 by ebarguil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 unsigned long	gettime(unsigned long time_zero)
 {
-	struct timeval		current;
+	struct timeval	current;
 	unsigned long	time;
 
 	gettimeofday(&current, NULL);

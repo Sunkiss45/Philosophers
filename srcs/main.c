@@ -6,7 +6,7 @@
 /*   By: ebarguil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 13:26:15 by ebarguil          #+#    #+#             */
-/*   Updated: 2022/02/05 20:34:07 by ebarguil         ###   ########.fr       */
+/*   Updated: 2022/02/05 20:51:10 by ebarguil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ int	start_threads(t_dat *dat)
 
 	i = 0;
 	now = dat->tail;
-	if (dat->round == 0)
-		dat->sig = SIG_END;
 	if (pthread_create(&dat->man_th, NULL, &manager, (void *)dat))
 		return (1);
 	pthread_mutex_lock(&dat->start_m);

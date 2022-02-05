@@ -6,7 +6,7 @@
 /*   By: ebarguil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 13:25:50 by ebarguil          #+#    #+#             */
-/*   Updated: 2022/02/05 18:35:02 by ebarguil         ###   ########.fr       */
+/*   Updated: 2022/02/05 20:51:31 by ebarguil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ unsigned long	ft_atolu(char *s, t_dat *dat)
 		res = (res * 10) + ((unsigned char)s[i] - 48);
 		i++;
 	}
-	if (i == 0 || s[i] != '\0' || res > INT_MAX || i > 11)
+	if (i == 0 || s[i] != '\0' || res > INT_MAX || res == 0 || i > 11)
 		dat->sig = SIG_END;
 	return (res);
 }
